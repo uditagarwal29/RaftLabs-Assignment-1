@@ -1,4 +1,5 @@
 # Assignment 1 - RaftLabs NodeJS Developer Test
+* Link : https://raftlabs-assignment1.herokuapp.com/
 
 ## Features 
 1. Prints out all books and magazines from CSV files with all their details
