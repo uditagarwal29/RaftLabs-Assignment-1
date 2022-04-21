@@ -1,0 +1,113 @@
+#author-container {
+    background-color: #fbfaf8;
+    min-height: 85.2vh;
+    padding: 25px;
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #2c2d36;
+    }
+    .options {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px 0;
+      a {
+        width: 70px;
+        margin: 0 15px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #e14817;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        &:hover {
+          background-color: #c44419;
+        }
+      }
+    }
+  
+    h3 {
+      font-size: 20px;
+      color: #2c2d36;
+    }
+  
+    .notfound {
+      text-align: center;
+      font-size: 25px;
+      color: #2c2d36;
+    }
+    .exportcsv {
+      display: block;
+      text-align: center;
+      padding: 0 0 20px 0;
+      font-size: 17px;
+      color: #3f70ab;
+      &:hover {
+        color: #2c2d36;
+      }
+    }
+    .add-author,
+    .search-author {
+      display: block;
+      margin: 20px 0;
+  
+      input {
+        margin: 0 auto;
+        width: 12%;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 15px;
+        border: 1px solid #d0cfce;
+        outline: none;
+        &:focus {
+          border: 1px solid #c44419;
+          transition: 0.35s ease;
+        }
+      }
+  
+      button {
+        height: 30px;
+        margin: 0 10px;
+        padding: 0 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #e14817;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        &:hover {
+          background-color: #c44419;
+        }
+      }
+    }
+  
+    .authors-table {
+      width: 900px;
+      text-align: center;
+      border: 1px solid #fff;
+      border-spacing: 1px;
+      font-family: "Cairo", sans-serif;
+      margin: auto;
+  
+      th {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+  
+      tr {
+      }
+  
+      td {
+        padding: 10px;
+        background-color: #eee;
+      }
+  
+      #isbn {
+        width: 150px;
+      }
+    }
+  }
+  

@@ -1,0 +1,79 @@
+
+<link  type="text/css" rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+    <h1>What are you looking for today ?</h1>
+    <div class="options">
+        <a href="/books">Books</a>
+        <a href="/magazines">Magazines</a>
+        <a href="/authors">Authors</a>
+    </div>
+
+
+    <div class="allMagsBooks">
+
+        <form class="search-box" action="/search" method="POST">
+            <input type="text" name="email" placeholder="Enter Author's Email" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <h2 class="Notfound">
+            <%= searchResStatus %>
+        </h2>
+        <% if(searchRes.length!=0) { %>
+            <table class="booksMag-table">
+                <tr class="booksMag-cols">
+                    <th>Title</th>
+                    <th>ISBN</th>
+                    <th>Authors</th>
+                </tr>
+
+                <tbody id="bookMag-table-content">
+                    <% for( let i=0; i < searchRes.length; i++ ) { %>
+                        <tr>
+                            <td>
+                                <%= searchRes[i].title %>
+                            </td>
+                            <td id="isbn">
+                                <%= searchRes[i].isbn %>
+                            </td>
+                            <td>
+                                <%= searchRes[i].authors %>
+                            </td>
+
+                        </tr>
+                        <% } %>
+
+
+                </tbody>
+            </table>
+            <% } %>
+
+            <h2>All books and Magazines</h2>
+                <table class="booksMag-table">
+                    <tr class="booksMag-cols">
+                        <th>Title</th>
+                        <th>ISBN</th>
+                        <th>Authors</th>
+                    </tr>
+
+                    <tbody id="booksMag-table-content">
+                        <% for( let i=0; i < booksMag.length; i++ ) { %>
+                            <tr>
+                                <td>
+                                    <%= booksMag[i].title %>
+                                </td>
+                                <td id="isbn">
+                                    <%= booksMag[i].isbn %>
+                                </td>
+                                <td>
+                                    <%= booksMag[i].authors %>
+                                </td>
+
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+    </div>
+
+</div>

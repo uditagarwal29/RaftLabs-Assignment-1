@@ -1,0 +1,87 @@
+#book-container {
+  background-color: #fbfaf8;
+  min-height: 85.2vh;
+  padding: 25px; }
+  #book-container h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #2c2d36; }
+  #book-container .options {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0; }
+    #book-container .options a {
+      width: 70px;
+      margin: 0 15px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #e14817;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      text-align: center; }
+      #book-container .options a:hover {
+        background-color: #c44419; }
+  #book-container h3 {
+    font-size: 20px;
+    color: #2c2d36; }
+  #book-container .notfound {
+    text-align: center;
+    font-size: 25px;
+    color: #2c2d36; }
+  #book-container .exportcsv {
+    display: block;
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-size: 17px;
+    color: #3f70ab; }
+    #book-container .exportcsv:hover {
+      color: #2c2d36; }
+  #book-container .add-book,
+  #book-container .search-book {
+    display: block;
+    margin: 20px 0; }
+    #book-container .add-book input,
+    #book-container .search-book input {
+      margin: 0 auto;
+      width: 12%;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 15px;
+      border: 1px solid #d0cfce;
+      outline: none; }
+      #book-container .add-book input:focus,
+      #book-container .search-book input:focus {
+        border: 1px solid #c44419;
+        transition: 0.35s ease; }
+    #book-container .add-book button,
+    #book-container .search-book button {
+      height: 30px;
+      margin: 0 10px;
+      padding: 0 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #e14817;
+      text-decoration: none;
+      color: white;
+      text-align: center; }
+      #book-container .add-book button:hover,
+      #book-container .search-book button:hover {
+        background-color: #c44419; }
+  #book-container .books-table {
+    width: 900px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-spacing: 1px;
+    font-family: "Cairo", sans-serif;
+    margin: auto; }
+    #book-container .books-table th {
+      background-color: #333;
+      color: #fff;
+      padding: 10px; }
+    #book-container .books-table td {
+      padding: 10px;
+      background-color: #eee; }
+    #book-container .books-table #isbn {
+      width: 150px; }

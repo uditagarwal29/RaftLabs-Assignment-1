@@ -1,0 +1,24 @@
+{
+  "name": "raftlabs",
+  "version": "1.0.0",
+  "description": "RaftLabs Assignment 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Udit Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-stringify": "^6.0.5",
+    "csvjson": "^5.1.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "json2csv": "^5.0.7",
+    "jsonexport": "^3.2.0",
+    "node-sass-middleware": "^1.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

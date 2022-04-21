@@ -1,0 +1,17 @@
+#layout-footer {
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #1e2749;
+  position: relative; }
+  #layout-footer a {
+    color: white;
+    text-decoration: none; }
+  #layout-footer .title {
+    display: inline-block;
+    float: right; }
+    #layout-footer .title p {
+      margin: 5px;
+      font-size: 15px;
+      color: white;
+      padding: 10px 10px 10px 10px; }

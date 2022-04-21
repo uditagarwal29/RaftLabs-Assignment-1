@@ -1,0 +1,90 @@
+<link type="text/css" rel="stylesheet" href="/css/books.css">
+<div id="book-container">
+    <h1>Books</h1>
+    <div class="options">
+        <a href="/books/">Books</a>
+        <a href="/magazines">Magazines</a>
+        <a href="/authors">Authors</a>
+    </div>
+
+    <h3>Add a Book</h3>
+
+    <form class="add-book" action="/books/add" method="POST">
+        <input type="text" name="title" placeholder="Enter Title" required>
+        <input type="text" name="isbn" placeholder="Enter ISBN Code" required>
+        <input type="text" name="authors" placeholder="Enter Authors" required>
+        <input type="text" name="description" placeholder="Enter Description" required>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <h3>Search for a Book</h3>
+    <form class="search-book" action="/books/search" method="POST">
+        <input type="text" name="isbn" placeholder="Enter ISBN Code" required>
+        <button type="submit">Search Book</button>
+    </form>
+
+
+    <h2 class="notfound">
+        <%= searchResStatus %>
+    </h2>
+    <% if(searchRes.length!=0) { %>
+        <table class="books-table">
+            <tr class="books-cols">
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Authors</th>
+                <th>Description</th>
+            </tr>
+
+            <tbody id="book-table-content">
+                <tr>
+                    <td>
+                        <%= searchRes[0].title %>
+                    </td>
+                    <td id="isbn">
+                        <%= searchRes[0].isbn %>
+                    </td>
+                    <td>
+                        <%= searchRes[0].authors %>
+                    </td>
+                    <td>
+                        <%= searchRes[0].description %>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <% } %>
+            <h1>All Books</h1>
+            <a class="exportcsv" href="/books/export">Download CSV</a>
+            <table class="books-table">
+                <tr class="books-cols">
+                    <th>Title</th>
+                    <th>ISBN</th>
+                    <th>Authors</th>
+                    <th>Description</th>
+                </tr>
+
+                <tbody id="book-table-content">
+                    <% for( let i=0; i < books.length; i++ ) { %>
+                        <tr>
+                            <td>
+                                <%= books[i].title %>
+                            </td>
+                            <td id="isbn">
+                                <%= books[i].isbn %>
+                            </td>
+                            <td>
+                                <%= books[i].authors %>
+                            </td>
+                            <td>
+                                <%= books[i].description %>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+
+            </table>
+
+</div>

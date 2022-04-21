@@ -1,0 +1,25 @@
+#layout-header {
+  margin: 0px 15px;
+  padding: 10px 0;
+  font-family: "segoe ui"; }
+  #layout-header nav {
+    height: 40px;
+    width: 100%;
+    background-color: white; }
+    #layout-header nav .nav-header .mini-logo {
+      float: left; }
+      #layout-header nav .nav-header .mini-logo a {
+        display: inline-block;
+        font-size: 22px;
+        padding: 5px 10px; }
+    #layout-header nav .nav-links {
+      float: right;
+      font-size: 19px; }
+      #layout-header nav .nav-links a {
+        display: inline-block;
+        padding: 5px 10px; }
+        #layout-header nav .nav-links a:hover {
+          color: #fb5000; }
+    #layout-header nav a {
+      color: black;
+      text-decoration: none; }

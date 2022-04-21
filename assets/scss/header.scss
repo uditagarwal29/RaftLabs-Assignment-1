@@ -1,0 +1,39 @@
+#layout-header {
+  margin: 0px 15px;
+  padding: 10px 0;
+  font-family: "segoe ui";
+  nav {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    .nav-header {
+      .mini-logo {
+        float: left;
+        a {
+          display: inline-block;
+          font-size: 22px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .nav-links {
+      float: right;
+      font-size: 19px;
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        &:hover{
+          color: #fb5000;
+        }
+      }
+      
+    }
+
+    a{
+      color: black;
+      text-decoration: none;
+    }
+
+  }
+}

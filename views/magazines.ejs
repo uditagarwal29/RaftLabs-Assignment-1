@@ -1,0 +1,90 @@
+<link type="text/css" rel="stylesheet" href="/css/magazines.css">
+
+<div id="mag-container">
+    <h1>Magazines</h1>
+
+    <div class="options">
+        <a href="/books/">Books</a>
+        <a href="/magazines">Magazines</a>
+        <a href="/authors">Authors</a>
+    </div>
+
+
+    <h3>Add a Magazine</h3>
+    <form class="add-mag" action="/magazines/add" method="POST">
+        <input type="text" name="title" placeholder="Enter Title" required>
+        <input type="text" name="isbn" placeholder="Enter ISBN Code" required>
+        <input type="text" name="authors" placeholder="Enter Authors" required>
+        <input type="text" name="publishedAt" placeholder="Enter Published Date" required>
+        <button type="submit">Add Magazine</button>
+    </form>
+
+    <h3>Search for a Magazine</h3>
+    <form class="search-mag" action="/magazines/search" method="POST">
+        <input type="text" name="isbn" placeholder="Enter ISBN Code" required>
+        <button type="submit">Search Magazine</button>
+    </form>
+
+    <h2 class="notfound">
+        <%= searchResStatus %>
+    </h2>
+    <% if(searchRes.length!=0) { %>
+        <table class="mags-table">
+            <tr class="mag-cols">
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Authors</th>
+                <th>Published Date</th>
+            </tr>
+
+            <tbody id="mags-table-content">
+                <tr>
+                    <td>
+                        <%= searchRes[0].title %>
+                    </td>
+                    <td>
+                        <%= searchRes[0].isbn %>
+                    </td>
+                    <td>
+                        <%= searchRes[0].authors %>
+                    </td>
+                    <td>
+                        <%= searchRes[0].publishedAt %>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <% } %>
+
+            <h1>All Magazines</h1>
+            <a class="exportcsv" href="/magazines/export">Download CSV</a>
+            
+            <table class="mags-table">
+                <tr class="mag-cols">
+                    <th>Title</th>
+                    <th>ISBN</th>
+                    <th>Authors</th>
+                    <th>Published Date</th>
+                </tr>
+
+                <tbody id="mags-table-content">
+                    <% for( let i=0; i < mags.length; i++ ) { %>
+                        <tr>
+                            <td>
+                                <%= mags[i].title %>
+                            </td>
+                            <td>
+                                <%= mags[i].isbn %>
+                            </td>
+                            <td>
+                                <%= mags[i].authors %>
+                            </td>
+                            <td>
+                                <%= mags[i].publishedAt %>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+</div>

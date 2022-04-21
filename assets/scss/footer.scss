@@ -1,0 +1,24 @@
+#layout-footer {
+  bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #1e2749;
+    position: relative;
+  
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    .title {
+      display: inline-block;
+      float: right;
+      p {
+        margin: 5px;
+        font-size: 15px;
+        color: white;
+        padding: 10px 10px 10px 10px;
+      }
+    }
+  }
+  
